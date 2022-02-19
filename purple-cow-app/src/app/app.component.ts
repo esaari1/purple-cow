@@ -18,7 +18,6 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     countapi.get(this.domain, this.key).then((result) => {
       this.count = result.value;
-      console.log(this.count);
     }, err => {
       console.log(err);
       alert('Unable to get current hit count');
