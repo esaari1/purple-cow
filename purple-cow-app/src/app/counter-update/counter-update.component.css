@@ -1,0 +1,23 @@
+:host {
+  --submit-bg-color: #087e6e;
+  --submit-color: white;
+}
+
+.btn {
+  color: var(--submit-color);
+  background-color: var(--submit-bg-color);
+  padding: 0 18px;
+  border-radius: 2px;
+  line-height: 40px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: brightness(95%);
+}
+
+.btn:active {
+  filter: brightness(90%);
+}
