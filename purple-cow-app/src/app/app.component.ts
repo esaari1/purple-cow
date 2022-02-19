@@ -1,4 +1,8 @@
+declare var require: any;
+
 import { Component } from '@angular/core';
+
+const countapi = require('countapi-js');
 
 @Component({
   selector: 'app-root',
@@ -7,4 +11,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'purple-cow-app';
+
+  ngOnInit() {
+
+  }
 }
