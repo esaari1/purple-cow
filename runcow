@@ -1,0 +1,11 @@
+#!/bin/bash
+
+port=${1:-3000}
+
+re='^[0-9]+$'
+if ! [[ $port =~ $re ]] ; then
+   echo "error: invalid port" >&2; exit 1
+fi
+
+docker build -t purple-cow .
+docker run -p ${port}:80 -d purple-cow
