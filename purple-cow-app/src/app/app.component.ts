@@ -25,7 +25,12 @@ export class AppComponent implements OnInit {
   }
 
   updateCounter() {
-    console.log('clicked');
+    countapi.hit(this.domain, this.key).then((result) => {
+      this.count = result.value;
+    }, err => {
+      console.log(err);
+      alert('Unable to update current hit count');
+    });
   }
 
 }
